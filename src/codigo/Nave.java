@@ -1,17 +1,16 @@
 /*
- * La nave del juego
+ * Programacion de la Nave
  */
+/* 
+@autor Juan Dieguez Kindelan
+*/
 package codigo;
 
 import java.awt.Image;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 
 /**
  *
- * @author Jorge Cisneros
+ * @author Guillermo Maroto
  */
 public class Nave {
     public Image imagen = null;
@@ -19,19 +18,18 @@ public class Nave {
     public int y = 0;
     private boolean pulsadoIzquierda = false;
     private boolean pulsadoDerecha = false;
-
     
-    public Nave(){
-
+    public Nave (){
+        
     }
     
     public void mueve(){
-        if (pulsadoIzquierda && x > 0){
-            x -= 3;
+        if(pulsadoIzquierda && x > 0){
+            x-=3;
         }
-        if (pulsadoDerecha && x < VentanaJuego.ANCHOPANTALLA - imagen.getWidth(null)){
-            x += 3;
-        }  
+        if(pulsadoDerecha && x < VentanaJuego.ANCHOPANTALLA - imagen.getWidth(null)){
+            x+=3;
+        }
     }
 
     public boolean isPulsadoIzquierda() {
